@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 1_Hien thi thong bao bang Alert -->
+    <button onclick="myAlert()">Click 1</button>
+        <!-- 2_Hien thi thong bao bang the HTML <khong dung div> -->
+    <button id="myAlert2" onclick="myAlert2()">Click 2</button>
+        <!--3_Hien thi thong bao bang the HTML <div> -->
+    <div id="myAlert3"></div>
+    <button onclick="myAlert3()">Click 3</button>
+        <!-- 4_Hien thi thong bao dung document.write() -->
+    <button onclick="myAlert4()">Click4</button>
+        <!-- 5_Hien thi thong bao bang console.log() -->
+    <button onclick="myAlert5()">Click5</button>
+    <input id="input" type="text">
+ 
+    <script>
+     function myAlert() {
+        alert('Hello')
+     }
+ 
+     function myAlert2() {
+        document.getElementById("myAlert2").innerHTML='Hello'
+     }
+     function myAlert3(){
+     document.getElementById('myAlert3').innerHTML = 'Xin chào!'
+     }
+     function myAlert4(){
+        document.write('Hello')
+     }
+     function myAlert5(){
+        let input = document.getElementById("input").value
+        console.log("Hello, "+ input);
+     }
+    </script>
+</body>
+</html>
