@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tính điểm ĐH khối D</h1>
+<table style=text-align:left height="200">
+    <tr >
+        <td>Môn Toán</td>
+        <td><Input id="toan" type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>Môn Văn</td>
+        <td><Input id="van" type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>Môn Anh</td>
+        <td><Input id="anh" type="text" size="6" value="0"></td>
+    </tr>
+    <tr>
+        <td>Khu vực</td>
+        <td>
+            <select id="kv">   
+                <option>KV1</option>
+                <option>KV2</option>
+                <option>KV2-NT</option>
+                <option>KV3</option>
+            </select>
+        </td>
+    </tr>
+    </table>
+    </br>
+    <button onclick="score()">Tính điểm</button>
+    <h2 id="result" style="color:#FF0000"></h2>
+</body>
+<script>
+    function score() {
+let t=parseFloat(document.getElementById("toan").value)
+    v=parseFloat(document.getElementById("van").value)
+    a=parseFloat(document.getElementById("anh").value)
+    kvscore=document.getElementById("kv").value
+switch(kvscore) {
+        case "KV1":
+            kvscore=0.75;
+            break;
+        case "KV2":
+            kvscore=0.5; 
+            break;
+        case "KV2-NT":
+            kvscore=0.25; 
+            break;
+        case "KV3":
+            kvscore=0; 
+            break;
+}
+console.log(kvscore)
+let result=(t+v+a+kvscore)
+    document.getElementById("result").innerHTML = "Tổng điểm đại học khối D của bạn là: "+result
+}
+    </script>
+</html>
