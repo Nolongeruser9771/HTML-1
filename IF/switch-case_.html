@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 1st way to do ---> review lai
+    let num=prompt("type your number",0)
+    let num1=prompt("Type your number here",0)
+    switch((num>0)?"1":(value<0)?"-1":"0") {
+        case 0:
+            console.log(0);
+            break;
+        case 1:
+            console.log(1); 
+            break;
+        case -1:
+            console.log(-1); 
+            break;
+    }
+    // 2nd way to do
+    switch(num1>0) {
+        case true:
+            alert('more than 0')
+            break
+        case false:
+            switch(num1) {
+                case 0:
+                    alert('equal 0')
+                    break;
+                default:
+                    alert('less than 0')
+                    break;
+            }
+    }
+</script>
+</html>
