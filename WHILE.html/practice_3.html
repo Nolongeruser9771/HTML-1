@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collaspe;
+            width: 400
+        }
+        td,th {
+            border: 1px solid #050000;
+            text-align: center;
+            padding: 3px;
+        }
+        tr:nth-child(odd) {
+                background-color: #9999FF;
+        }
+        </style>
+<script>
+    let row
+    let r=1
+    let c=1
+    row = "<table>"
+    while(r<=10) {
+        row= row + "<tr>"
+        while(c<=10) {
+            row= row + '<td>'+ r*c + '</td>';
+            c++;
+        }
+        row=row + '</tr>';
+        c=1;
+        r++;
+    }
+    row= row+"</table>";
+    document.write(row);
+</script>
+</body>
+</html>
